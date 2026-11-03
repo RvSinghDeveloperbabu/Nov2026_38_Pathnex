@@ -1,3 +1,4 @@
 6hr - Morning class and watched the DevOps Linux Scripting in 2 Hours video.
-15m - Github Day02 Basic task is completed.
-3hr - Performed the Linux commends like chmod, uname, pwd, ln, ln -s, tar, gzip, mkdir -p
+1m - Github Day02 Basic task is completed.
+1hr - Performed the Linux commends like chmod, uname, pwd, ln, ln -s, tar, gzip, mkdir -p
+2hr - worked on bash Scripting.

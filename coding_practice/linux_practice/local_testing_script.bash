@@ -1,2 +1,0 @@
-WORKING_DIR=$(pwd)
-
