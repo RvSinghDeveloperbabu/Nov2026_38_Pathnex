@@ -2,3 +2,5 @@
 1m - Github Day02 Basic task is completed.
 1hr - Performed the Linux commends like chmod, uname, pwd, ln, ln -s, tar, gzip, mkdir -p
 2hr - worked on bash Scripting.
+20m - Evening class
+1hr - more bash Scripting coding.

@@ -1,3 +1,6 @@
+#!/bin/bash
+## This script is designed to create a testing environment for local script execution.
+
 WORKING_DIR=$(pwd)
 echo "Working directory: $WORKING_DIR"
 mkdir -p "$WORKING_DIR/script_testing"
@@ -70,6 +73,21 @@ if [ -f "log/error.log" ]; then
 else
     echo "Error log file does not exist."
 fi
+
+
+echo "------ Creating a test file in the lib directory... and checking EOF (End of File) marker -------"
+cat > lib/only_for_testing.txt <<EOF
+This is a test file created for testing purposes.
+It contains some sample text to demonstrate file creation and manipulation in a script.
+You can add more lines or modify the content as needed for your testing scenarios.
+EOF
+
+cat lib/only_for_testing.txt
+
+echo "------ Checking for the presence of 'error' in the error log file -------"
+cat log/error.log | grep -i "error" | head -n 1
+cat log/error.log | grep -i "error" | tail -n 1
+
 
 echo "Cleaning up... after 10 seconds"
 sleep 10
