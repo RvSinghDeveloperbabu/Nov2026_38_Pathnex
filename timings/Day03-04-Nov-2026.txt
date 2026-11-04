@@ -1,0 +1,4 @@
+4hr - Morning class and watched the DevOps Linux Scripting in 2 Hours video.
+1hr - Github Day 03 — Ansible, Terraform & Kubernetes Basics is completed.
+2hr - worked on bash Scripting coding.
+2hr - Reading the Linux Interview Questions
