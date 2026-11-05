@@ -1,0 +1,3 @@
+5hr - Morning class and watched the github to ec2 youtube remaining video.
+15m - Day01 Basic task is completed.
+3hr - performed the Linux commends like ls, cd, mkdir, mkdir -p, pwd, chmod, umask, ls -a, ls -l, ln, ln -s, touch, cat, head, tail, cp, mv, rm and find
