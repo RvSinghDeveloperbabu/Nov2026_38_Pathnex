@@ -1,6 +1,37 @@
 #!/bin/bash
 ## This script is designed to create a testing environment for local script execution.
 
+echo "checking the script name and arguments passed to the script"
+echo "Script name: $0"
+echo "First argument: $1"
+echo "Second argument: $2"
+echo "All arguments: $@"
+echo "Number of arguments: $#"
+echo "Script name without path: $(basename "$0")"
+
+# Usage check with $# and $0
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <file1> [file2 ...]"
+    exit 1
+fi
+
+echo "Checking $# file(s)..."
+
+# Loop over every argument with "$@"
+for file in "$@"; do
+    if [ -f "$file" ]; then
+        echo "OK: $file ($(wc -l < "$file") lines)"
+    else
+        echo "Missing: $file"
+        failed=1
+    fi
+done
+
+# Exit status with $?
+if [ "${failed:-0}" -eq 1 ]; then
+    exit 1
+fi
+
 WORKING_DIR=$(pwd)
 echo "Working directory: $WORKING_DIR"
 mkdir -p "$WORKING_DIR/script_testing"
@@ -88,6 +119,7 @@ echo "------ Checking for the presence of 'error' in the error log file -------"
 cat log/error.log | grep -i "error" | head -n 1
 cat log/error.log | grep -i "error" | tail -n 1
 
+shred -u log/error.log
 
 echo "Cleaning up... after 10 seconds"
 sleep 10

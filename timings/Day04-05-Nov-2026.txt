@@ -1,0 +1,3 @@
+4:30hr - Morning class and watched the DevOps Linux Scripting in 2 Hours video.
+1hr - Github Day 04 — Basic CI/CD Concepts with Jenkins & GitLab is completed.
+1hr - worked on Git Commands on local system.
