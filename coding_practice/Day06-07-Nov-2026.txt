@@ -1,0 +1,65 @@
+# Day 06 — Introduction to CloudFormation and Kubernetes Advanced Concepts
+
+## Ansible - Install Docker
+
+- name: Install Docker
+  host: all
+  become: yes
+  tasks:
+    - name: Install Docker
+      yum:
+       name: docker
+       state: present
+    - name: Start Docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+
+## Terraform - Provisioning EC2 with VPC
+
+resource "aws_vpc" "main" {
+  cdir_block = "10.0.0.0/16"
+}
+
+resource "aws_instance" "pathnex_ec2" {
+  ami       =  "ami-xxxxxxx"
+  instance_type = "t3.micro"
+  subnet_id = aws_vpc.main.id
+  tags = {
+    Name = "Pathnex-EC2"
+  }
+}
+
+
+## Kubernetes - Pod with Volume Mount
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-pod
+spec:
+  containers:
+    - name: web
+      image: nginx
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: html-volume
+  volumes:
+    - name: html-volume
+      hostPath:
+        path: /data
+        type: Directory
+
+      
+## Shell Script - Check for Running Services
+
+#!/bin/bash
+FROM node:18
+WORKDIR /opt/pathnex/node-app
+COPY app.js /opt/pathnex/node-app/
+CMD ["node", "/opt/pathnex/node-app/app.js"]
+
+# Real Path
+/opt/pathnex/node-app/

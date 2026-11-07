@@ -1,0 +1,2 @@
+4hr - Morning class.
+1hr - Github Day 06 — Introduction to CloudFormation and Kubernetes Advanced Concepts is completed.
