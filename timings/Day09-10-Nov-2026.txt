@@ -1,2 +1,4 @@
 5:30hr - Morning class
 45min  - Github Day 09 — Docker Integration with Jenkins & GitLab is completed
+2hr    - Docker understand and learning from PDF and chatGPT
+2hr    - Docker practice
