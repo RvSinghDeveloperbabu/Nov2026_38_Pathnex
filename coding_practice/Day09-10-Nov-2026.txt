@@ -1,0 +1,110 @@
+# Day 09 — Docker Integration with Jenkins & GitLab
+
+## Ansible - Setup Docker Container for Nginx
+
+- name: Setup Docker Container for Nginx
+  host: all
+  become: yes
+  tasks:
+    - name: pull Nginx Image
+      docker_image:
+        name: nginx
+        source: pull
+    - name: Run Nginx Container
+      docker_container:
+        name: nginx-container
+        image: nginx
+        state: started
+        published_ports:
+          - "8080:80"
+
+
+## Terraform - EC2 with Auto Scaling Group
+
+resource "aws_lunch_configuration" "pathnex_config" {
+  name = "pathnex_config"
+  image_id = "ami-xxxxxx12344"
+  instance_type = "t3.medium"
+}
+
+resource "aws_autoscaling_group" "pathnex_autoscaling" {
+  desired_capacity = 2
+  max_size = 3
+  min_size = 1
+  vpc_zone_identifier = ["subnet-1231234"]
+  launch_configuration = aws_lunch_configuration.pathnex_config.id
+}
+
+
+## Kubernetes - Horizontal Pod Autoscale (HPA)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      container:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+
+---
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: pathnex-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: pathnex-deployment
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
+
+
+## Jenkinsfile - Deploy to Kubernetes
+
+pipeline {
+  agent any
+  stages {
+    stage('Deploy to Kubernetes'){
+      steps{
+        script {
+          sh 'kubectl apply -f deployment.yaml'
+        }
+      }
+    }
+  }
+}
+
+
+## GitLab CI/CD - Deploy to Kubernetes
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - kubectl apply -f deployment.yaml
+
+
+## Docker
+
+# Environment Variables
+FROM ubuntu:22:04
+ENV INSTITUTE=Pathnex
+ENV COURSE=DevOps
+CMD echo "$INSTITUTE - $COURSE"

@@ -1,0 +1,2 @@
+5:30hr - Morning class
+45min  - Github Day 09 — Docker Integration with Jenkins & GitLab is completed
