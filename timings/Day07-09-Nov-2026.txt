@@ -1,0 +1,2 @@
+3:30hr - Morning class.
+1:30hr    - Github Day 07 — Automating Cloud Infrastructure with Terraform & Ansible is completed.
