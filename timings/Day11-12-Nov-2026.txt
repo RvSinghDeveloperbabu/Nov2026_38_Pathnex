@@ -1,2 +1,4 @@
-3hr    - Morning class
-35min  - Github task Day 11 - Kubernetes with Helm, Advanced Terraform and GitLab CI/CD is completed.
+3hr   - Morning class
+35min - Github task Day 11 - Kubernetes with Helm, Advanced Terraform and GitLab CI/CD is completed.
+10min - Introduction video
+3hr   - Studied the Kubernetes from the document and watched the Kubernetes upgrade vide which is not completed yet.
