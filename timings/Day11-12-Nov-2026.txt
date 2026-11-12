@@ -1,0 +1,2 @@
+3hr    - Morning class
+35min  - Github task Day 11 - Kubernetes with Helm, Advanced Terraform and GitLab CI/CD is completed.
