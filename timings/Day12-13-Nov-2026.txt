@@ -1,0 +1,5 @@
+4hr   - Morning class
+20min - Github task Day 12 — Scaling Applications and Automation is completed.
+10min - Introduction video
+2:30hr - watch Master Kubernetes upgrade video on youtube also made some important notes
+1:30hr - Study Kubernetes and used the CMDs on local
