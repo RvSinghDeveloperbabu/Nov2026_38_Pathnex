@@ -1,0 +1,4 @@
+3hr - Morning Class
+2hr - Learning and trying to create the EKS on aws.
+10min - Introduction video
+45min - Github task Day 13 - Advanced Automation with CloudFormation and CI/CD is completed.
