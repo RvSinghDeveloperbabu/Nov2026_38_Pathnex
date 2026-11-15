@@ -1,0 +1,3 @@
+4hr - Morning Class
+20min - Introduction video
+30min - Github task Day 14 - Kubernetes Advanced Concepts & Multiple-Environment Deployments is completed.
