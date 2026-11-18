@@ -1,2 +1,3 @@
 3hr - Morning Terraform class
 40min - Github task Day 17 — Multi-Cloud Deployments, Auto-healing, and Advanced CI/CD is completed.
+4hr - Worked on kubernetes, Docker and Terraform.
