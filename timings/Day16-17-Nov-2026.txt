@@ -1,0 +1,2 @@
+30min - Github task Day 16 — Advanced CloudFormation & Multi-Region Deployments is completed.
+2hr - watched the ArgoCD Morning class
