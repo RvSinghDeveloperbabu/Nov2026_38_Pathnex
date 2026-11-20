@@ -1,0 +1,3 @@
+3hr - Morning Terraform class
+40min - Github task Day 18 — High Availability, Multi-Region, and Auto-scaling is completed.
+30min - Introduction video
