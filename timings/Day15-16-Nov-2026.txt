@@ -1,0 +1,2 @@
+4hr - Morning Class
+30min - Github task Day 15 - Automation with Terraform, Ansible, and CI/CD pipeline is completed.
