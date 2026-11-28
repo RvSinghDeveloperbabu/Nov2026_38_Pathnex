@@ -1,3 +1,3 @@
 2hr - Morning Class
-30min - Github task Day 23 — Serverless Architecture and Microservices is completed.
+30min - Github task Day 25 — Continuous Monitoring and Alerts is completed.
 10min - Introduction video
